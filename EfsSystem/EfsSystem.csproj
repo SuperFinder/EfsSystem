@@ -1,0 +1,208 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E3324069-93A9-4D8A-9A59-4A549D2A0422}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>EfsSystem</RootNamespace>
+    <AssemblyName>EfsSystem</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net, Version=1.2.13.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.8.3.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="common\AutoSizeFormHelper.cs" />
+    <Compile Include="common\LogHelper.cs" />
+    <Compile Include="common\MySqlHelper.cs" />
+    <Compile Include="Entity\CustomerInfo.cs" />
+    <Compile Include="Entity\Equip.cs" />
+    <Compile Include="Entity\FalutInfo.cs" />
+    <Compile Include="Entity\LeaveOverInfo.cs" />
+    <Compile Include="Entity\ServiceInfo.cs" />
+    <Compile Include="Entity\SparePart.cs" />
+    <Compile Include="Entity\UserInfo.cs" />
+    <Compile Include="FormAddCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAddCustomer.Designer.cs">
+      <DependentUpon>FormAddCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAddEquip.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAddEquip.Designer.cs">
+      <DependentUpon>FormAddEquip.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAddSparePart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAddSparePart.Designer.cs">
+      <DependentUpon>FormAddSparePart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAddUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAddUser.Designer.cs">
+      <DependentUpon>FormAddUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCustomerInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCustomerInfo.Designer.cs">
+      <DependentUpon>FormCustomerInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormEquipsInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormEquipsInfo.Designer.cs">
+      <DependentUpon>FormEquipsInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormFaultInfoStatistics.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormFaultInfoStatistics.Designer.cs">
+      <DependentUpon>FormFaultInfoStatistics.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLeaveOverInfoStatistics.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLeaveOverInfoStatistics.Designer.cs">
+      <DependentUpon>FormLeaveOverInfoStatistics.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormServiceInfoSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormServiceInfoSearch.Designer.cs">
+      <DependentUpon>FormServiceInfoSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormServiceInfoStatistics.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormServiceInfoStatistics.Designer.cs">
+      <DependentUpon>FormServiceInfoStatistics.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSparePartInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSparePartInfo.Designer.cs">
+      <DependentUpon>FormSparePartInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormUserInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUserInfo.Designer.cs">
+      <DependentUpon>FormUserInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormAddCustomer.resx">
+      <DependentUpon>FormAddCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAddEquip.resx">
+      <DependentUpon>FormAddEquip.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAddSparePart.resx">
+      <DependentUpon>FormAddSparePart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAddUser.resx">
+      <DependentUpon>FormAddUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCustomerInfo.resx">
+      <DependentUpon>FormCustomerInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormEquipsInfo.resx">
+      <DependentUpon>FormEquipsInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormFaultInfoStatistics.resx">
+      <DependentUpon>FormFaultInfoStatistics.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLeaveOverInfoStatistics.resx">
+      <DependentUpon>FormLeaveOverInfoStatistics.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormServiceInfoSearch.resx">
+      <DependentUpon>FormServiceInfoSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormServiceInfoStatistics.resx">
+      <DependentUpon>FormServiceInfoStatistics.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSparePartInfo.resx">
+      <DependentUpon>FormSparePartInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUserInfo.resx">
+      <DependentUpon>FormUserInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Dao\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
