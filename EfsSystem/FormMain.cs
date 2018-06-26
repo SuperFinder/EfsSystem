@@ -53,6 +53,7 @@ namespace EfsSystem
             new FormCustomerInfo().ShowDialog();
             customerInfos.Clear();
             customerInfos = customerInfoDao.getAllCustomerInfo();
+            cmbUnitName.Items.Clear();
             foreach (CustomerInfo customerInfo in customerInfos)
             {
                 cmbUnitName.Items.Add(customerInfo.unitName);
@@ -69,6 +70,7 @@ namespace EfsSystem
             new FormUserInfo().ShowDialog();
             userInfos.Clear();
             userInfos = userDao.getAllUserInfo();
+            cmbResponsibleUserName.Items.Clear();
             foreach (UserInfo userInfo in userInfos)
             {
                 cmbResponsibleUserName.Items.Add(userInfo.userName);
@@ -139,6 +141,15 @@ namespace EfsSystem
         private void leaveOverInfoStatisticsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             new FormLeaveOverInfoStatistics().ShowDialog();
+        }
+
+        private void cmbUnitName_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            CustomerInfo customerInfo = customerInfoDao.getCustomerInfoByUnitName(cmbUnitName.Text);
+            textBoxResponsibleCustomerName.Text = customerInfo.responsibleUserName;
+            textBoxAddress.Text = customerInfo.address;
+            textBoxResponsibleCustomerTel.Text = customerInfo.tel;
+            textBoxResponsibleCustomerFax.Text = customerInfo.fax;
         }
     }
 }

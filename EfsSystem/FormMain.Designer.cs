@@ -132,28 +132,28 @@
             // customerInfoToolStripMenuItem
             // 
             this.customerInfoToolStripMenuItem.Name = "customerInfoToolStripMenuItem";
-            this.customerInfoToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.customerInfoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.customerInfoToolStripMenuItem.Text = "客户信息";
             this.customerInfoToolStripMenuItem.Click += new System.EventHandler(this.customerInfoToolStripMenuItem_Click);
             // 
             // userInfoToolStripMenuItem
             // 
             this.userInfoToolStripMenuItem.Name = "userInfoToolStripMenuItem";
-            this.userInfoToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.userInfoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.userInfoToolStripMenuItem.Text = "内部人员信息";
             this.userInfoToolStripMenuItem.Click += new System.EventHandler(this.userInfoToolStripMenuItem_Click);
             // 
             // equipsInfoToolStripMenuItem
             // 
             this.equipsInfoToolStripMenuItem.Name = "equipsInfoToolStripMenuItem";
-            this.equipsInfoToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.equipsInfoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.equipsInfoToolStripMenuItem.Text = "装备信息";
             this.equipsInfoToolStripMenuItem.Click += new System.EventHandler(this.equipsInfoToolStripMenuItem_Click);
             // 
             // sparePartsInfoToolStripMenuItem
             // 
             this.sparePartsInfoToolStripMenuItem.Name = "sparePartsInfoToolStripMenuItem";
-            this.sparePartsInfoToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.sparePartsInfoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.sparePartsInfoToolStripMenuItem.Text = "备件信息";
             this.sparePartsInfoToolStripMenuItem.Click += new System.EventHandler(this.sparePartsInfoToolStripMenuItem_Click);
             // 
@@ -315,6 +315,7 @@
             this.cmbUnitName.Name = "cmbUnitName";
             this.cmbUnitName.Size = new System.Drawing.Size(178, 20);
             this.cmbUnitName.TabIndex = 2;
+            this.cmbUnitName.SelectedIndexChanged += new System.EventHandler(this.cmbUnitName_SelectedIndexChanged);
             // 
             // label1
             // 

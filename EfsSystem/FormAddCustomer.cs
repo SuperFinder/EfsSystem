@@ -40,7 +40,7 @@ namespace EfsSystem
         private void btnSave_Click(object sender, EventArgs e)
         {
             customerInfoDao.addOrUpdateCustomer(customerId,textBoxUnitName.Text,textBoxAddress.Text,textBoxResponsibleUserName.Text,textBoxTel.Text,textBoxFax.Text,textBoxEmail.Text);
-            if (customerId != String.Empty)
+            if (customerId == String.Empty)
             {
                 MessageBox.Show("添加成功","提示",MessageBoxButtons.OK);
             }

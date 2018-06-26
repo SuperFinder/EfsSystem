@@ -27,13 +27,12 @@ namespace EfsSystem.Dao
                 {
                     MySqlParameter paraId = new MySqlParameter("@paraId", customerId);
                     string sql = "update customer set unit_name = @paraUnitName,address = @paraAddress,responsible_user_name = @paraResponsibleUserName,tel = @paraTel,fax = @paraFax, email = @paraEmail where id = @paraId";
-                    common.MySqlHelper.ExecuteNonQuery(common.MySqlHelper.conn, CommandType.Text, sql, paraUnitName, paraAddress, paraResponsibleUserName, paraTel, paraFax, paraEmail, paraId);
-                    MessageBox.Show(@"修改客户成功!", "提示", MessageBoxButtons.OK);
+                    MySqlHelper.ExecuteNonQuery(common.MySqlHelper.conn, CommandType.Text, sql, paraUnitName, paraAddress, paraResponsibleUserName, paraTel, paraFax, paraEmail, paraId);
                 }
                 else
                 {
                     string sql = "insert into customer(unit_name,address,responsible_user_name,tel,fax,email) values(@paraUnitName,@paraAddress,@paraResponsibleUserName,@paraTel,@paraFax,@paraEmail)";
-                    common.MySqlHelper.ExecuteNonQuery(MySqlHelper.conn, CommandType.Text, sql, paraUnitName, paraAddress, paraResponsibleUserName, paraTel, paraFax, paraEmail);
+                    MySqlHelper.ExecuteNonQuery(MySqlHelper.conn, CommandType.Text, sql, paraUnitName, paraAddress, paraResponsibleUserName, paraTel, paraFax, paraEmail);
                 }
             }
             catch (Exception exception)
@@ -85,6 +84,25 @@ namespace EfsSystem.Dao
                 mySqlDataReader.Close();
             }
             return customerInfos;
+        }
+
+        public CustomerInfo getCustomerInfoByUnitName(string unitName)
+        {
+            CustomerInfo customerInfo = new CustomerInfo();
+            MySqlParameter paraUnitName = new MySqlParameter("@unitName", unitName);
+            string sql = "select unit_name,address,responsible_user_name,tel,fax,email from customer where unit_name = @unitName";
+            MySqlDataReader mySqlDataReader = MySqlHelper.ExecuteReader(MySqlHelper.conn, CommandType.Text, sql, paraUnitName);
+            if (mySqlDataReader.Read())
+            {
+                customerInfo.unitName = (string)mySqlDataReader["unit_name"];
+                customerInfo.address = (string)mySqlDataReader["address"];
+                customerInfo.responsibleUserName = (string)mySqlDataReader["responsible_user_name"];
+                customerInfo.tel = (string)mySqlDataReader["tel"];
+                customerInfo.fax = (string)mySqlDataReader["fax"];
+                customerInfo.email = (string)mySqlDataReader["email"];
+            }
+            mySqlDataReader.Close();
+            return customerInfo;
         }
     }
 }
