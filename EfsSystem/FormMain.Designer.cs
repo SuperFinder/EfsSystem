@@ -44,64 +44,64 @@
             this.lblMessageBrife = new System.Windows.Forms.Label();
             this.lblReceiverName = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.dateTimePickerEndDate = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePickerStartDate = new System.Windows.Forms.DateTimePicker();
+            this.cmbServiceStyle = new System.Windows.Forms.ComboBox();
+            this.cmbResponsibleUserName = new System.Windows.Forms.ComboBox();
+            this.cmbUnitName = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lblUnitName = new System.Windows.Forms.Label();
             this.lblWorkOrderNumber = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBoxUserCount = new System.Windows.Forms.TextBox();
+            this.textBoxDayCount = new System.Windows.Forms.TextBox();
+            this.textBoxResponsibleCustomerFax = new System.Windows.Forms.TextBox();
+            this.textBoxReturnMoney = new System.Windows.Forms.TextBox();
+            this.textBoxExplain = new System.Windows.Forms.TextBox();
+            this.textBoxFaultInfo = new System.Windows.Forms.TextBox();
+            this.textBoxEquipsCount = new System.Windows.Forms.TextBox();
+            this.textBoxUserNames = new System.Windows.Forms.TextBox();
+            this.textBoxResponsibleCustomerTel = new System.Windows.Forms.TextBox();
+            this.textBoxResponsibleCustomerName = new System.Windows.Forms.TextBox();
+            this.textBoxAddress = new System.Windows.Forms.TextBox();
             this.textBoxWorkOrderNumber = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.label9 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.textBox12 = new System.Windows.Forms.TextBox();
-            this.label15 = new System.Windows.Forms.Label();
-            this.textBox13 = new System.Windows.Forms.TextBox();
-            this.label16 = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.label17 = new System.Windows.Forms.Label();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.label18 = new System.Windows.Forms.Label();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
-            this.label19 = new System.Windows.Forms.Label();
-            this.comboBox6 = new System.Windows.Forms.ComboBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
-            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
-            this.richTextBox3 = new System.Windows.Forms.RichTextBox();
-            this.richTextBox4 = new System.Windows.Forms.RichTextBox();
+            this.richTextBoxSuggestPrice = new System.Windows.Forms.RichTextBox();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.richTextBoxSuggestAttitude = new System.Windows.Forms.RichTextBox();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.richTextBoxSuggestAppearance = new System.Windows.Forms.RichTextBox();
+            this.cmbSatisfiedPrice = new System.Windows.Forms.ComboBox();
+            this.cmbSatisfiedService = new System.Windows.Forms.ComboBox();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.cmbSatisfiedDeliver = new System.Windows.Forms.ComboBox();
+            this.cmbSatisfiedQuality = new System.Windows.Forms.ComboBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
-            this.groupBox5.SuspendLayout();
-            this.groupBox6.SuspendLayout();
             this.groupBox7.SuspendLayout();
+            this.groupBox6.SuspendLayout();
+            this.groupBox5.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -233,10 +233,11 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.dateTimePicker2);
-            this.groupBox2.Controls.Add(this.dateTimePicker1);
-            this.groupBox2.Controls.Add(this.comboBox2);
-            this.groupBox2.Controls.Add(this.comboBox1);
+            this.groupBox2.Controls.Add(this.dateTimePickerEndDate);
+            this.groupBox2.Controls.Add(this.dateTimePickerStartDate);
+            this.groupBox2.Controls.Add(this.cmbServiceStyle);
+            this.groupBox2.Controls.Add(this.cmbResponsibleUserName);
+            this.groupBox2.Controls.Add(this.cmbUnitName);
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.label6);
@@ -254,18 +255,17 @@
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.lblUnitName);
             this.groupBox2.Controls.Add(this.lblWorkOrderNumber);
-            this.groupBox2.Controls.Add(this.textBox9);
-            this.groupBox2.Controls.Add(this.textBox7);
-            this.groupBox2.Controls.Add(this.textBox5);
-            this.groupBox2.Controls.Add(this.textBox12);
-            this.groupBox2.Controls.Add(this.textBox13);
-            this.groupBox2.Controls.Add(this.textBox11);
-            this.groupBox2.Controls.Add(this.textBox10);
-            this.groupBox2.Controls.Add(this.textBox6);
-            this.groupBox2.Controls.Add(this.textBox8);
-            this.groupBox2.Controls.Add(this.textBox4);
-            this.groupBox2.Controls.Add(this.textBox2);
-            this.groupBox2.Controls.Add(this.textBox3);
+            this.groupBox2.Controls.Add(this.textBoxUserCount);
+            this.groupBox2.Controls.Add(this.textBoxDayCount);
+            this.groupBox2.Controls.Add(this.textBoxResponsibleCustomerFax);
+            this.groupBox2.Controls.Add(this.textBoxReturnMoney);
+            this.groupBox2.Controls.Add(this.textBoxExplain);
+            this.groupBox2.Controls.Add(this.textBoxFaultInfo);
+            this.groupBox2.Controls.Add(this.textBoxEquipsCount);
+            this.groupBox2.Controls.Add(this.textBoxUserNames);
+            this.groupBox2.Controls.Add(this.textBoxResponsibleCustomerTel);
+            this.groupBox2.Controls.Add(this.textBoxResponsibleCustomerName);
+            this.groupBox2.Controls.Add(this.textBoxAddress);
             this.groupBox2.Controls.Add(this.textBoxWorkOrderNumber);
             this.groupBox2.Location = new System.Drawing.Point(12, 127);
             this.groupBox2.Name = "groupBox2";
@@ -274,13 +274,47 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "基本信息";
             // 
-            // comboBox1
+            // dateTimePickerEndDate
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(78, 69);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(178, 20);
-            this.comboBox1.TabIndex = 2;
+            this.dateTimePickerEndDate.Location = new System.Drawing.Point(227, 253);
+            this.dateTimePickerEndDate.Name = "dateTimePickerEndDate";
+            this.dateTimePickerEndDate.Size = new System.Drawing.Size(112, 21);
+            this.dateTimePickerEndDate.TabIndex = 3;
+            // 
+            // dateTimePickerStartDate
+            // 
+            this.dateTimePickerStartDate.Location = new System.Drawing.Point(78, 253);
+            this.dateTimePickerStartDate.Name = "dateTimePickerStartDate";
+            this.dateTimePickerStartDate.Size = new System.Drawing.Size(112, 21);
+            this.dateTimePickerStartDate.TabIndex = 3;
+            // 
+            // cmbServiceStyle
+            // 
+            this.cmbServiceStyle.FormattingEnabled = true;
+            this.cmbServiceStyle.Items.AddRange(new object[] {
+            "售后",
+            "巡修"});
+            this.cmbServiceStyle.Location = new System.Drawing.Point(397, 207);
+            this.cmbServiceStyle.Name = "cmbServiceStyle";
+            this.cmbServiceStyle.Size = new System.Drawing.Size(178, 20);
+            this.cmbServiceStyle.TabIndex = 2;
+            this.cmbServiceStyle.Text = "售后";
+            // 
+            // cmbResponsibleUserName
+            // 
+            this.cmbResponsibleUserName.FormattingEnabled = true;
+            this.cmbResponsibleUserName.Location = new System.Drawing.Point(72, 207);
+            this.cmbResponsibleUserName.Name = "cmbResponsibleUserName";
+            this.cmbResponsibleUserName.Size = new System.Drawing.Size(178, 20);
+            this.cmbResponsibleUserName.TabIndex = 2;
+            // 
+            // cmbUnitName
+            // 
+            this.cmbUnitName.FormattingEnabled = true;
+            this.cmbUnitName.Location = new System.Drawing.Point(78, 69);
+            this.cmbUnitName.Name = "cmbUnitName";
+            this.cmbUnitName.Size = new System.Drawing.Size(178, 20);
+            this.cmbUnitName.TabIndex = 2;
             // 
             // label1
             // 
@@ -299,6 +333,96 @@
             this.label4.Size = new System.Drawing.Size(29, 12);
             this.label4.TabIndex = 1;
             this.label4.Text = "传真";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(332, 211);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(53, 12);
+            this.label6.TabIndex = 1;
+            this.label6.Text = "服务类型";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(197, 257);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(23, 12);
+            this.label9.TabIndex = 1;
+            this.label9.Text = "---";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(460, 303);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(29, 12);
+            this.label11.TabIndex = 1;
+            this.label11.Text = "人数";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(460, 257);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(29, 12);
+            this.label8.TabIndex = 1;
+            this.label8.Text = "天数";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(19, 257);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(53, 12);
+            this.label7.TabIndex = 1;
+            this.label7.Text = "起止时间";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(31, 487);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(29, 12);
+            this.label15.TabIndex = 1;
+            this.label15.Text = "说明";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(31, 441);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(29, 12);
+            this.label14.TabIndex = 1;
+            this.label14.Text = "回款";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(19, 395);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(53, 12);
+            this.label13.TabIndex = 1;
+            this.label13.Text = "故障信息";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(19, 349);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(53, 12);
+            this.label12.TabIndex = 1;
+            this.label12.Text = "装备数量";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(31, 303);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(29, 12);
+            this.label10.TabIndex = 1;
+            this.label10.Text = "人员";
             // 
             // label5
             // 
@@ -345,33 +469,82 @@
             this.lblWorkOrderNumber.TabIndex = 1;
             this.lblWorkOrderNumber.Text = "工作令号";
             // 
-            // textBox5
+            // textBoxUserCount
             // 
-            this.textBox5.Location = new System.Drawing.Point(397, 161);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(178, 21);
-            this.textBox5.TabIndex = 1;
+            this.textBoxUserCount.Location = new System.Drawing.Point(513, 299);
+            this.textBoxUserCount.Name = "textBoxUserCount";
+            this.textBoxUserCount.Size = new System.Drawing.Size(59, 21);
+            this.textBoxUserCount.TabIndex = 1;
             // 
-            // textBox4
+            // textBoxDayCount
             // 
-            this.textBox4.Location = new System.Drawing.Point(78, 161);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(178, 21);
-            this.textBox4.TabIndex = 1;
+            this.textBoxDayCount.Location = new System.Drawing.Point(513, 253);
+            this.textBoxDayCount.Name = "textBoxDayCount";
+            this.textBoxDayCount.Size = new System.Drawing.Size(59, 21);
+            this.textBoxDayCount.TabIndex = 1;
             // 
-            // textBox2
+            // textBoxResponsibleCustomerFax
             // 
-            this.textBox2.Location = new System.Drawing.Point(397, 69);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(178, 21);
-            this.textBox2.TabIndex = 1;
+            this.textBoxResponsibleCustomerFax.Location = new System.Drawing.Point(397, 161);
+            this.textBoxResponsibleCustomerFax.Name = "textBoxResponsibleCustomerFax";
+            this.textBoxResponsibleCustomerFax.Size = new System.Drawing.Size(178, 21);
+            this.textBoxResponsibleCustomerFax.TabIndex = 1;
             // 
-            // textBox3
+            // textBoxReturnMoney
             // 
-            this.textBox3.Location = new System.Drawing.Point(78, 115);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(497, 21);
-            this.textBox3.TabIndex = 1;
+            this.textBoxReturnMoney.Location = new System.Drawing.Point(78, 437);
+            this.textBoxReturnMoney.Name = "textBoxReturnMoney";
+            this.textBoxReturnMoney.Size = new System.Drawing.Size(497, 21);
+            this.textBoxReturnMoney.TabIndex = 1;
+            // 
+            // textBoxExplain
+            // 
+            this.textBoxExplain.Location = new System.Drawing.Point(78, 482);
+            this.textBoxExplain.Name = "textBoxExplain";
+            this.textBoxExplain.Size = new System.Drawing.Size(497, 21);
+            this.textBoxExplain.TabIndex = 1;
+            // 
+            // textBoxFaultInfo
+            // 
+            this.textBoxFaultInfo.Location = new System.Drawing.Point(78, 391);
+            this.textBoxFaultInfo.Name = "textBoxFaultInfo";
+            this.textBoxFaultInfo.Size = new System.Drawing.Size(497, 21);
+            this.textBoxFaultInfo.TabIndex = 1;
+            // 
+            // textBoxEquipsCount
+            // 
+            this.textBoxEquipsCount.Location = new System.Drawing.Point(78, 345);
+            this.textBoxEquipsCount.Name = "textBoxEquipsCount";
+            this.textBoxEquipsCount.Size = new System.Drawing.Size(497, 21);
+            this.textBoxEquipsCount.TabIndex = 1;
+            // 
+            // textBoxUserNames
+            // 
+            this.textBoxUserNames.Location = new System.Drawing.Point(78, 299);
+            this.textBoxUserNames.Name = "textBoxUserNames";
+            this.textBoxUserNames.Size = new System.Drawing.Size(352, 21);
+            this.textBoxUserNames.TabIndex = 1;
+            // 
+            // textBoxResponsibleCustomerTel
+            // 
+            this.textBoxResponsibleCustomerTel.Location = new System.Drawing.Point(78, 161);
+            this.textBoxResponsibleCustomerTel.Name = "textBoxResponsibleCustomerTel";
+            this.textBoxResponsibleCustomerTel.Size = new System.Drawing.Size(178, 21);
+            this.textBoxResponsibleCustomerTel.TabIndex = 1;
+            // 
+            // textBoxResponsibleCustomerName
+            // 
+            this.textBoxResponsibleCustomerName.Location = new System.Drawing.Point(397, 69);
+            this.textBoxResponsibleCustomerName.Name = "textBoxResponsibleCustomerName";
+            this.textBoxResponsibleCustomerName.Size = new System.Drawing.Size(178, 21);
+            this.textBoxResponsibleCustomerName.TabIndex = 1;
+            // 
+            // textBoxAddress
+            // 
+            this.textBoxAddress.Location = new System.Drawing.Point(78, 115);
+            this.textBoxAddress.Name = "textBoxAddress";
+            this.textBoxAddress.Size = new System.Drawing.Size(497, 21);
+            this.textBoxAddress.TabIndex = 1;
             // 
             // textBoxWorkOrderNumber
             // 
@@ -383,12 +556,12 @@
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.groupBox4);
-            this.groupBox3.Controls.Add(this.comboBox6);
-            this.groupBox3.Controls.Add(this.comboBox4);
+            this.groupBox3.Controls.Add(this.cmbSatisfiedPrice);
+            this.groupBox3.Controls.Add(this.cmbSatisfiedService);
             this.groupBox3.Controls.Add(this.label19);
             this.groupBox3.Controls.Add(this.label17);
-            this.groupBox3.Controls.Add(this.comboBox5);
-            this.groupBox3.Controls.Add(this.comboBox3);
+            this.groupBox3.Controls.Add(this.cmbSatisfiedDeliver);
+            this.groupBox3.Controls.Add(this.cmbSatisfiedQuality);
             this.groupBox3.Controls.Add(this.label18);
             this.groupBox3.Controls.Add(this.label16);
             this.groupBox3.Location = new System.Drawing.Point(683, 127);
@@ -397,258 +570,6 @@
             this.groupBox3.TabIndex = 1;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "满意度情况";
-            // 
-            // textBox6
-            // 
-            this.textBox6.Location = new System.Drawing.Point(78, 207);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(178, 21);
-            this.textBox6.TabIndex = 1;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(332, 211);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(53, 12);
-            this.label6.TabIndex = 1;
-            this.label6.Text = "服务类型";
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(397, 207);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(178, 20);
-            this.comboBox2.TabIndex = 2;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(19, 257);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(53, 12);
-            this.label7.TabIndex = 1;
-            this.label7.Text = "起止时间";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(460, 257);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(29, 12);
-            this.label8.TabIndex = 1;
-            this.label8.Text = "天数";
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(78, 253);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(112, 21);
-            this.dateTimePicker1.TabIndex = 3;
-            // 
-            // dateTimePicker2
-            // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(227, 253);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(112, 21);
-            this.dateTimePicker2.TabIndex = 3;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(197, 257);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(23, 12);
-            this.label9.TabIndex = 1;
-            this.label9.Text = "---";
-            // 
-            // textBox7
-            // 
-            this.textBox7.Location = new System.Drawing.Point(513, 253);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(59, 21);
-            this.textBox7.TabIndex = 1;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(31, 303);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(29, 12);
-            this.label10.TabIndex = 1;
-            this.label10.Text = "人员";
-            // 
-            // textBox8
-            // 
-            this.textBox8.Location = new System.Drawing.Point(78, 299);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(352, 21);
-            this.textBox8.TabIndex = 1;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(460, 303);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(29, 12);
-            this.label11.TabIndex = 1;
-            this.label11.Text = "人数";
-            // 
-            // textBox9
-            // 
-            this.textBox9.Location = new System.Drawing.Point(513, 299);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(59, 21);
-            this.textBox9.TabIndex = 1;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(19, 349);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(53, 12);
-            this.label12.TabIndex = 1;
-            this.label12.Text = "装备数量";
-            // 
-            // textBox10
-            // 
-            this.textBox10.Location = new System.Drawing.Point(78, 345);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(497, 21);
-            this.textBox10.TabIndex = 1;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(19, 395);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(53, 12);
-            this.label13.TabIndex = 1;
-            this.label13.Text = "故障信息";
-            // 
-            // textBox11
-            // 
-            this.textBox11.Location = new System.Drawing.Point(78, 391);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(497, 21);
-            this.textBox11.TabIndex = 1;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(31, 441);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(29, 12);
-            this.label14.TabIndex = 1;
-            this.label14.Text = "回款";
-            // 
-            // textBox12
-            // 
-            this.textBox12.Location = new System.Drawing.Point(78, 437);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(497, 21);
-            this.textBox12.TabIndex = 1;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(31, 487);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(29, 12);
-            this.label15.TabIndex = 1;
-            this.label15.Text = "说明";
-            // 
-            // textBox13
-            // 
-            this.textBox13.Location = new System.Drawing.Point(78, 482);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(497, 21);
-            this.textBox13.TabIndex = 1;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(29, 27);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(35, 12);
-            this.label16.TabIndex = 2;
-            this.label16.Text = "质量:";
-            // 
-            // comboBox3
-            // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
-            "很满意",
-            "满意",
-            "不满意"});
-            this.comboBox3.Location = new System.Drawing.Point(70, 24);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(121, 20);
-            this.comboBox3.TabIndex = 3;
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(282, 27);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(35, 12);
-            this.label17.TabIndex = 2;
-            this.label17.Text = "服务:";
-            // 
-            // comboBox4
-            // 
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Items.AddRange(new object[] {
-            "很满意",
-            "满意",
-            "不满意"});
-            this.comboBox4.Location = new System.Drawing.Point(323, 24);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(121, 20);
-            this.comboBox4.TabIndex = 3;
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(29, 61);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(35, 12);
-            this.label18.TabIndex = 2;
-            this.label18.Text = "交付:";
-            // 
-            // comboBox5
-            // 
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Items.AddRange(new object[] {
-            "很满意",
-            "满意",
-            "不满意"});
-            this.comboBox5.Location = new System.Drawing.Point(70, 58);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(121, 20);
-            this.comboBox5.TabIndex = 3;
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(282, 61);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(35, 12);
-            this.label19.TabIndex = 2;
-            this.label19.Text = "价格:";
-            // 
-            // comboBox6
-            // 
-            this.comboBox6.FormattingEnabled = true;
-            this.comboBox6.Items.AddRange(new object[] {
-            "很满意",
-            "满意",
-            "不满意"});
-            this.comboBox6.Location = new System.Drawing.Point(323, 58);
-            this.comboBox6.Name = "comboBox6";
-            this.comboBox6.Size = new System.Drawing.Size(121, 20);
-            this.comboBox6.TabIndex = 3;
             // 
             // groupBox4
             // 
@@ -662,29 +583,9 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "建议";
             // 
-            // groupBox5
-            // 
-            this.groupBox5.Controls.Add(this.richTextBox2);
-            this.groupBox5.Location = new System.Drawing.Point(1, 25);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(654, 121);
-            this.groupBox5.TabIndex = 0;
-            this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "外观，性能，可靠性";
-            // 
-            // groupBox6
-            // 
-            this.groupBox6.Controls.Add(this.richTextBox3);
-            this.groupBox6.Location = new System.Drawing.Point(1, 152);
-            this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(654, 121);
-            this.groupBox6.TabIndex = 0;
-            this.groupBox6.TabStop = false;
-            this.groupBox6.Text = "态度，速度，产品维护，备件供应";
-            // 
             // groupBox7
             // 
-            this.groupBox7.Controls.Add(this.richTextBox4);
+            this.groupBox7.Controls.Add(this.richTextBoxSuggestPrice);
             this.groupBox7.Location = new System.Drawing.Point(1, 279);
             this.groupBox7.Name = "groupBox7";
             this.groupBox7.Size = new System.Drawing.Size(654, 121);
@@ -692,29 +593,137 @@
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "产品价格，改进建议";
             // 
-            // richTextBox2
+            // richTextBoxSuggestPrice
             // 
-            this.richTextBox2.Location = new System.Drawing.Point(1, 20);
-            this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.Size = new System.Drawing.Size(654, 96);
-            this.richTextBox2.TabIndex = 0;
-            this.richTextBox2.Text = "";
+            this.richTextBoxSuggestPrice.Location = new System.Drawing.Point(1, 19);
+            this.richTextBoxSuggestPrice.Name = "richTextBoxSuggestPrice";
+            this.richTextBoxSuggestPrice.Size = new System.Drawing.Size(654, 96);
+            this.richTextBoxSuggestPrice.TabIndex = 1;
+            this.richTextBoxSuggestPrice.Text = "";
             // 
-            // richTextBox3
+            // groupBox6
             // 
-            this.richTextBox3.Location = new System.Drawing.Point(1, 19);
-            this.richTextBox3.Name = "richTextBox3";
-            this.richTextBox3.Size = new System.Drawing.Size(654, 96);
-            this.richTextBox3.TabIndex = 1;
-            this.richTextBox3.Text = "";
+            this.groupBox6.Controls.Add(this.richTextBoxSuggestAttitude);
+            this.groupBox6.Location = new System.Drawing.Point(1, 152);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(654, 121);
+            this.groupBox6.TabIndex = 0;
+            this.groupBox6.TabStop = false;
+            this.groupBox6.Text = "态度，速度，产品维护，备件供应";
             // 
-            // richTextBox4
+            // richTextBoxSuggestAttitude
             // 
-            this.richTextBox4.Location = new System.Drawing.Point(1, 19);
-            this.richTextBox4.Name = "richTextBox4";
-            this.richTextBox4.Size = new System.Drawing.Size(654, 96);
-            this.richTextBox4.TabIndex = 1;
-            this.richTextBox4.Text = "";
+            this.richTextBoxSuggestAttitude.Location = new System.Drawing.Point(1, 19);
+            this.richTextBoxSuggestAttitude.Name = "richTextBoxSuggestAttitude";
+            this.richTextBoxSuggestAttitude.Size = new System.Drawing.Size(654, 96);
+            this.richTextBoxSuggestAttitude.TabIndex = 1;
+            this.richTextBoxSuggestAttitude.Text = "";
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.Controls.Add(this.richTextBoxSuggestAppearance);
+            this.groupBox5.Location = new System.Drawing.Point(1, 25);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(654, 121);
+            this.groupBox5.TabIndex = 0;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "外观，性能，可靠性";
+            // 
+            // richTextBoxSuggestAppearance
+            // 
+            this.richTextBoxSuggestAppearance.Location = new System.Drawing.Point(1, 20);
+            this.richTextBoxSuggestAppearance.Name = "richTextBoxSuggestAppearance";
+            this.richTextBoxSuggestAppearance.Size = new System.Drawing.Size(654, 96);
+            this.richTextBoxSuggestAppearance.TabIndex = 0;
+            this.richTextBoxSuggestAppearance.Text = "";
+            // 
+            // cmbSatisfiedPrice
+            // 
+            this.cmbSatisfiedPrice.FormattingEnabled = true;
+            this.cmbSatisfiedPrice.Items.AddRange(new object[] {
+            "很满意",
+            "满意",
+            "不满意"});
+            this.cmbSatisfiedPrice.Location = new System.Drawing.Point(323, 58);
+            this.cmbSatisfiedPrice.Name = "cmbSatisfiedPrice";
+            this.cmbSatisfiedPrice.Size = new System.Drawing.Size(121, 20);
+            this.cmbSatisfiedPrice.TabIndex = 3;
+            this.cmbSatisfiedPrice.Text = "很满意";
+            // 
+            // cmbSatisfiedService
+            // 
+            this.cmbSatisfiedService.FormattingEnabled = true;
+            this.cmbSatisfiedService.Items.AddRange(new object[] {
+            "很满意",
+            "满意",
+            "不满意"});
+            this.cmbSatisfiedService.Location = new System.Drawing.Point(323, 24);
+            this.cmbSatisfiedService.Name = "cmbSatisfiedService";
+            this.cmbSatisfiedService.Size = new System.Drawing.Size(121, 20);
+            this.cmbSatisfiedService.TabIndex = 3;
+            this.cmbSatisfiedService.Text = "很满意";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(282, 61);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(35, 12);
+            this.label19.TabIndex = 2;
+            this.label19.Text = "价格:";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(282, 27);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(35, 12);
+            this.label17.TabIndex = 2;
+            this.label17.Text = "服务:";
+            // 
+            // cmbSatisfiedDeliver
+            // 
+            this.cmbSatisfiedDeliver.FormattingEnabled = true;
+            this.cmbSatisfiedDeliver.Items.AddRange(new object[] {
+            "很满意",
+            "满意",
+            "不满意"});
+            this.cmbSatisfiedDeliver.Location = new System.Drawing.Point(70, 58);
+            this.cmbSatisfiedDeliver.Name = "cmbSatisfiedDeliver";
+            this.cmbSatisfiedDeliver.Size = new System.Drawing.Size(121, 20);
+            this.cmbSatisfiedDeliver.TabIndex = 3;
+            this.cmbSatisfiedDeliver.Text = "很满意";
+            // 
+            // cmbSatisfiedQuality
+            // 
+            this.cmbSatisfiedQuality.FormattingEnabled = true;
+            this.cmbSatisfiedQuality.Items.AddRange(new object[] {
+            "很满意",
+            "满意",
+            "不满意"});
+            this.cmbSatisfiedQuality.Location = new System.Drawing.Point(70, 24);
+            this.cmbSatisfiedQuality.Name = "cmbSatisfiedQuality";
+            this.cmbSatisfiedQuality.Size = new System.Drawing.Size(121, 20);
+            this.cmbSatisfiedQuality.TabIndex = 3;
+            this.cmbSatisfiedQuality.Text = "很满意";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(29, 61);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(35, 12);
+            this.label18.TabIndex = 2;
+            this.label18.Text = "交付:";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(29, 27);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(35, 12);
+            this.label16.TabIndex = 2;
+            this.label16.Text = "质量:";
             // 
             // FormMain
             // 
@@ -740,9 +749,9 @@
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.groupBox4.ResumeLayout(false);
-            this.groupBox5.ResumeLayout(false);
-            this.groupBox6.ResumeLayout(false);
             this.groupBox7.ResumeLayout(false);
+            this.groupBox6.ResumeLayout(false);
+            this.groupBox5.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -767,55 +776,55 @@
         private System.Windows.Forms.Label lblMessageBrife;
         private System.Windows.Forms.Label lblReceiverName;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmbUnitName;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblUnitName;
         private System.Windows.Forms.Label lblWorkOrderNumber;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBoxResponsibleCustomerFax;
+        private System.Windows.Forms.TextBox textBoxResponsibleCustomerTel;
+        private System.Windows.Forms.TextBox textBoxResponsibleCustomerName;
+        private System.Windows.Forms.TextBox textBoxAddress;
         private System.Windows.Forms.TextBox textBoxWorkOrderNumber;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.DateTimePicker dateTimePickerEndDate;
+        private System.Windows.Forms.DateTimePicker dateTimePickerStartDate;
+        private System.Windows.Forms.ComboBox cmbServiceStyle;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox textBoxDayCount;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox12;
-        private System.Windows.Forms.TextBox textBox13;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox textBoxUserCount;
+        private System.Windows.Forms.TextBox textBoxReturnMoney;
+        private System.Windows.Forms.TextBox textBoxExplain;
+        private System.Windows.Forms.TextBox textBoxFaultInfo;
+        private System.Windows.Forms.TextBox textBoxEquipsCount;
+        private System.Windows.Forms.TextBox textBoxUserNames;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.GroupBox groupBox7;
-        private System.Windows.Forms.RichTextBox richTextBox4;
+        private System.Windows.Forms.RichTextBox richTextBoxSuggestPrice;
         private System.Windows.Forms.GroupBox groupBox6;
-        private System.Windows.Forms.RichTextBox richTextBox3;
+        private System.Windows.Forms.RichTextBox richTextBoxSuggestAttitude;
         private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.RichTextBox richTextBox2;
-        private System.Windows.Forms.ComboBox comboBox6;
-        private System.Windows.Forms.ComboBox comboBox4;
+        private System.Windows.Forms.RichTextBox richTextBoxSuggestAppearance;
+        private System.Windows.Forms.ComboBox cmbSatisfiedPrice;
+        private System.Windows.Forms.ComboBox cmbSatisfiedService;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.ComboBox comboBox5;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox cmbSatisfiedDeliver;
+        private System.Windows.Forms.ComboBox cmbSatisfiedQuality;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.ComboBox cmbResponsibleUserName;
     }
 }
 

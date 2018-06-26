@@ -5,7 +5,7 @@ using System.Text;
 
 namespace EfsSystem.Entity
 {
-    class SparePart
+    public class SparePart
     {
         public int id { get; set; }
         public string sparePartName { get; set; }

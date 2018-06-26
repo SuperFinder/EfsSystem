@@ -1,10 +1,25 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Windows.Forms;
+using EfsSystem.Dao;
+using EfsSystem.Entity;
 
 namespace EfsSystem
 {
     public partial class FormMain : Form
     {
+        public List<CustomerInfo> customerInfos = new List<CustomerInfo>();
+        public List<UserInfo> userInfos = new List<UserInfo>();
+        public List<Equip> equips = new List<Equip>();
+        public List<SparePart> spareParts = new List<SparePart>();
+
+        readonly CustomerInfoDao customerInfoDao = new CustomerInfoDao();
+        readonly EquipDao equipDao = new EquipDao();
+        FalutInfoDao falutInfoDao = new FalutInfoDao();
+        LeaveOverInfoDao leaveOverInfoDao = new LeaveOverInfoDao();
+        ServiceInfoDao serviceInfoDao = new ServiceInfoDao();
+        readonly SparePartDao sparePartDao = new SparePartDao();
+        readonly UserDao userDao = new UserDao();
         public FormMain()
         {
             InitializeComponent();
@@ -13,7 +28,21 @@ namespace EfsSystem
             MinimizeBox = false;
             StartPosition = FormStartPosition.CenterScreen;
         }
-
+        private void FormMain_Load(object sender, EventArgs e)
+        {
+            customerInfos = customerInfoDao.getAllCustomerInfo();
+            userInfos = userDao.getAllUserInfo();
+            equips = equipDao.getAllEquip();
+            spareParts = sparePartDao.getAllSparePart();
+            foreach (CustomerInfo customerInfo in customerInfos)
+            {
+                cmbUnitName.Items.Add(customerInfo.unitName);
+            }
+            foreach (UserInfo userInfo in userInfos)
+            {
+                cmbResponsibleUserName.Items.Add(userInfo.userName);
+            }
+        }
         /// <summary>
         /// 客户信息维护
         /// </summary>
@@ -22,6 +51,12 @@ namespace EfsSystem
         private void customerInfoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             new FormCustomerInfo().ShowDialog();
+            customerInfos.Clear();
+            customerInfos = customerInfoDao.getAllCustomerInfo();
+            foreach (CustomerInfo customerInfo in customerInfos)
+            {
+                cmbUnitName.Items.Add(customerInfo.unitName);
+            }
         }
 
         /// <summary>
@@ -32,6 +67,12 @@ namespace EfsSystem
         private void userInfoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             new FormUserInfo().ShowDialog();
+            userInfos.Clear();
+            userInfos = userDao.getAllUserInfo();
+            foreach (UserInfo userInfo in userInfos)
+            {
+                cmbResponsibleUserName.Items.Add(userInfo.userName);
+            }
         }
 
         /// <summary>
@@ -42,6 +83,12 @@ namespace EfsSystem
         private void equipsInfoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             new FormEquipsInfo().ShowDialog();
+            /*equips.Clear();
+            equips = equipDao.getAllEquip();
+            foreach (Equip equip in equips)
+            {
+                
+            }*/
         }
 
         /// <summary>
@@ -92,11 +139,6 @@ namespace EfsSystem
         private void leaveOverInfoStatisticsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             new FormLeaveOverInfoStatistics().ShowDialog();
-        }
-
-        private void FormMain_Load(object sender, EventArgs e)
-        {
-            
         }
     }
 }

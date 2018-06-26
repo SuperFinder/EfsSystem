@@ -3,6 +3,7 @@ using System;
 using System.Data;
 using System.Windows.Forms;
 using EfsSystem.common;
+using EfsSystem.Dao;
 using MySql.Data.MySqlClient;
 using MySqlHelper = EfsSystem.common.MySqlHelper;
 
@@ -11,6 +12,7 @@ namespace EfsSystem
     public partial class FormAddCustomer : Form
     {
         private string customerId = string.Empty;
+        public CustomerInfoDao customerInfoDao = new CustomerInfoDao();
         public FormAddCustomer()
         {
             InitializeComponent();
@@ -37,41 +39,16 @@ namespace EfsSystem
         /// <param name="e"></param>
         private void btnSave_Click(object sender, EventArgs e)
         {
-            CustomerInfo customerInfo = new CustomerInfo {
-                unitName = textBoxUnitName.Text,
-                address = textBoxAddress.Text,
-                responsibleUserName = textBoxResponsibleUserName.Text,
-                tel = textBoxTel.Text,
-                fax = textBoxFax.Text,
-                email = textBoxEmail.Text
-            };
-            try
+            customerInfoDao.addOrUpdateCustomer(customerId,textBoxUnitName.Text,textBoxAddress.Text,textBoxResponsibleUserName.Text,textBoxTel.Text,textBoxFax.Text,textBoxEmail.Text);
+            if (customerId != String.Empty)
             {
-                MySqlParameter paraUnitName = new MySqlParameter("@paraUnitName",customerInfo.unitName);
-                MySqlParameter paraAddress = new MySqlParameter("@paraAddress",customerInfo.address);
-                MySqlParameter paraResponsibleUserName = new MySqlParameter("@paraResponsibleUserName", customerInfo.responsibleUserName);
-                MySqlParameter paraTel = new MySqlParameter("@paraTel",customerInfo.tel);
-                MySqlParameter paraFax = new MySqlParameter("@paraFax",customerInfo.fax);
-                MySqlParameter paraEmail = new MySqlParameter("@paraEmail",customerInfo.email);
-                if (customerId != string.Empty)
-                {
-                    MySqlParameter paraId = new MySqlParameter("@paraId",customerId);
-                    string sql = "update customer set unit_name = @paraUnitName,address = @paraAddress,responsible_user_name = @paraResponsibleUserName,tel = @paraTel,fax = @paraFax, email = @paraEmail where id = @paraId";
-                    MySqlHelper.ExecuteNonQuery(MySqlHelper.conn, CommandType.Text, sql, paraUnitName, paraAddress, paraResponsibleUserName, paraTel, paraFax, paraEmail,paraId);
-                    MessageBox.Show(@"修改客户成功!", "提示", MessageBoxButtons.OK);
-                }
-                else
-                {
-                    string sql = "insert into customer(unit_name,address,responsible_user_name,tel,fax,email) values(@paraUnitName,@paraAddress,@paraResponsibleUserName,@paraTel,@paraFax,@paraEmail)";
-                    MySqlHelper.ExecuteNonQuery(MySqlHelper.conn, CommandType.Text, sql, paraUnitName, paraAddress, paraResponsibleUserName, paraTel, paraFax, paraEmail);
-                    MessageBox.Show(@"新增客户成功!", "提示", MessageBoxButtons.OK);
-                }
-                Close();
+                MessageBox.Show("添加成功","提示",MessageBoxButtons.OK);
             }
-            catch (Exception exception)
+            else
             {
-                LogHelper.WriteLog(typeof(FormAddCustomer),exception.ToString());
+                MessageBox.Show("修改成功", "提示", MessageBoxButtons.OK);
             }
+            Close();
         }
 
         /// <summary>
@@ -88,19 +65,13 @@ namespace EfsSystem
         {
             if (customerId != string.Empty)
             {
-                MySqlParameter paraId = new MySqlParameter("@paraId",customerId);
-                string sql = "select unit_name,address,responsible_user_name,tel,fax,email from customer where id = @paraId";
-                MySqlDataReader mySqlDataReader = MySqlHelper.ExecuteReader(MySqlHelper.conn, CommandType.Text, sql, paraId);
-                if (mySqlDataReader.Read())
-                {
-                    textBoxUnitName.Text = (string)mySqlDataReader["unit_name"];
-                    textBoxAddress.Text = (string) mySqlDataReader["address"];
-                    textBoxResponsibleUserName.Text = (string) mySqlDataReader["responsible_user_name"];
-                    textBoxTel.Text = (string) mySqlDataReader["tel"];
-                    textBoxFax.Text = (string) mySqlDataReader["fax"];
-                    textBoxEmail.Text = (string) mySqlDataReader["email"];
-                }
-                mySqlDataReader.Close();
+                CustomerInfo customerInfo = customerInfoDao.getCustomerInfo(customerId);
+                textBoxUnitName.Text = customerInfo.unitName;
+                textBoxAddress.Text = customerInfo.address;
+                textBoxResponsibleUserName.Text = customerInfo.responsibleUserName;
+                textBoxTel.Text = customerInfo.tel;
+                textBoxFax.Text = customerInfo.fax;
+                textBoxEmail.Text = customerInfo.email;
             }
         }
     }
