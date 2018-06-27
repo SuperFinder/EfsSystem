@@ -310,12 +310,15 @@
             // 
             // cmbUnitName
             // 
+            this.cmbUnitName.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cmbUnitName.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.cmbUnitName.FormattingEnabled = true;
             this.cmbUnitName.Location = new System.Drawing.Point(78, 69);
             this.cmbUnitName.Name = "cmbUnitName";
             this.cmbUnitName.Size = new System.Drawing.Size(178, 20);
             this.cmbUnitName.TabIndex = 4;
             this.cmbUnitName.SelectedIndexChanged += new System.EventHandler(this.cmbUnitName_SelectedIndexChanged);
+            this.cmbUnitName.TextChanged += new System.EventHandler(this.cmbUnitName_TextChanged);
             // 
             // label1
             // 

@@ -36,6 +36,7 @@ namespace EfsSystem
             spareParts = sparePartDao.getAllSparePart();
             foreach (CustomerInfo customerInfo in customerInfos)
             {
+                cmbUnitName.AutoCompleteCustomSource.Add(customerInfo.unitName);
                 cmbUnitName.Items.Add(customerInfo.unitName);
             }
             foreach (UserInfo userInfo in userInfos)
@@ -57,6 +58,7 @@ namespace EfsSystem
             foreach (CustomerInfo customerInfo in customerInfos)
             {
                 cmbUnitName.Items.Add(customerInfo.unitName);
+                cmbUnitName.AutoCompleteCustomSource.Add(customerInfo.unitName);
             }
         }
 
@@ -144,6 +146,15 @@ namespace EfsSystem
         }
 
         private void cmbUnitName_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            CustomerInfo customerInfo = customerInfoDao.getCustomerInfoByUnitName(cmbUnitName.Text);
+            textBoxResponsibleCustomerName.Text = customerInfo.responsibleUserName;
+            textBoxAddress.Text = customerInfo.address;
+            textBoxResponsibleCustomerTel.Text = customerInfo.tel;
+            textBoxResponsibleCustomerFax.Text = customerInfo.fax;
+        }
+
+        private void cmbUnitName_TextChanged(object sender, EventArgs e)
         {
             CustomerInfo customerInfo = customerInfoDao.getCustomerInfoByUnitName(cmbUnitName.Text);
             textBoxResponsibleCustomerName.Text = customerInfo.responsibleUserName;
