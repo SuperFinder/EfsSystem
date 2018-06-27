@@ -73,7 +73,7 @@
             this.textBoxSparePartName.Location = new System.Drawing.Point(116, 43);
             this.textBoxSparePartName.Name = "textBoxSparePartName";
             this.textBoxSparePartName.Size = new System.Drawing.Size(174, 21);
-            this.textBoxSparePartName.TabIndex = 1;
+            this.textBoxSparePartName.TabIndex = 0;
             // 
             // textBoxSparePartVersion
             // 
@@ -87,14 +87,14 @@
             this.textBoxSparePartSpecification.Location = new System.Drawing.Point(116, 113);
             this.textBoxSparePartSpecification.Name = "textBoxSparePartSpecification";
             this.textBoxSparePartSpecification.Size = new System.Drawing.Size(174, 21);
-            this.textBoxSparePartSpecification.TabIndex = 1;
+            this.textBoxSparePartSpecification.TabIndex = 2;
             // 
             // btnSave
             // 
             this.btnSave.Location = new System.Drawing.Point(34, 161);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(81, 37);
-            this.btnSave.TabIndex = 2;
+            this.btnSave.TabIndex = 3;
             this.btnSave.Text = "保存";
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
@@ -104,7 +104,7 @@
             this.btnCancel.Location = new System.Drawing.Point(209, 161);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(81, 37);
-            this.btnCancel.TabIndex = 2;
+            this.btnCancel.TabIndex = 4;
             this.btnCancel.Text = "取消";
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);

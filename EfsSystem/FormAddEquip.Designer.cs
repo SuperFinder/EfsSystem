@@ -85,7 +85,7 @@
             this.textBoxName.Location = new System.Drawing.Point(135, 20);
             this.textBoxName.Name = "textBoxName";
             this.textBoxName.Size = new System.Drawing.Size(168, 21);
-            this.textBoxName.TabIndex = 1;
+            this.textBoxName.TabIndex = 0;
             // 
             // textBoxNumber
             // 
@@ -99,21 +99,21 @@
             this.textBoxVersion.Location = new System.Drawing.Point(135, 78);
             this.textBoxVersion.Name = "textBoxVersion";
             this.textBoxVersion.Size = new System.Drawing.Size(168, 21);
-            this.textBoxVersion.TabIndex = 1;
+            this.textBoxVersion.TabIndex = 2;
             // 
             // textBoxSpecification
             // 
             this.textBoxSpecification.Location = new System.Drawing.Point(135, 107);
             this.textBoxSpecification.Name = "textBoxSpecification";
             this.textBoxSpecification.Size = new System.Drawing.Size(168, 21);
-            this.textBoxSpecification.TabIndex = 1;
+            this.textBoxSpecification.TabIndex = 3;
             // 
             // btnSave
             // 
             this.btnSave.Location = new System.Drawing.Point(51, 145);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(88, 34);
-            this.btnSave.TabIndex = 2;
+            this.btnSave.TabIndex = 4;
             this.btnSave.Text = "保存";
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
@@ -123,7 +123,7 @@
             this.btnCancel.Location = new System.Drawing.Point(215, 145);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(88, 34);
-            this.btnCancel.TabIndex = 2;
+            this.btnCancel.TabIndex = 5;
             this.btnCancel.Text = "取消";
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);

@@ -132,28 +132,28 @@
             // customerInfoToolStripMenuItem
             // 
             this.customerInfoToolStripMenuItem.Name = "customerInfoToolStripMenuItem";
-            this.customerInfoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.customerInfoToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
             this.customerInfoToolStripMenuItem.Text = "客户信息";
             this.customerInfoToolStripMenuItem.Click += new System.EventHandler(this.customerInfoToolStripMenuItem_Click);
             // 
             // userInfoToolStripMenuItem
             // 
             this.userInfoToolStripMenuItem.Name = "userInfoToolStripMenuItem";
-            this.userInfoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.userInfoToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
             this.userInfoToolStripMenuItem.Text = "内部人员信息";
             this.userInfoToolStripMenuItem.Click += new System.EventHandler(this.userInfoToolStripMenuItem_Click);
             // 
             // equipsInfoToolStripMenuItem
             // 
             this.equipsInfoToolStripMenuItem.Name = "equipsInfoToolStripMenuItem";
-            this.equipsInfoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.equipsInfoToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
             this.equipsInfoToolStripMenuItem.Text = "装备信息";
             this.equipsInfoToolStripMenuItem.Click += new System.EventHandler(this.equipsInfoToolStripMenuItem_Click);
             // 
             // sparePartsInfoToolStripMenuItem
             // 
             this.sparePartsInfoToolStripMenuItem.Name = "sparePartsInfoToolStripMenuItem";
-            this.sparePartsInfoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.sparePartsInfoToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
             this.sparePartsInfoToolStripMenuItem.Text = "备件信息";
             this.sparePartsInfoToolStripMenuItem.Click += new System.EventHandler(this.sparePartsInfoToolStripMenuItem_Click);
             // 
@@ -194,7 +194,7 @@
             this.groupBox1.Location = new System.Drawing.Point(12, 28);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(1326, 93);
-            this.groupBox1.TabIndex = 1;
+            this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "接收人信息";
             // 
@@ -279,14 +279,14 @@
             this.dateTimePickerEndDate.Location = new System.Drawing.Point(227, 253);
             this.dateTimePickerEndDate.Name = "dateTimePickerEndDate";
             this.dateTimePickerEndDate.Size = new System.Drawing.Size(112, 21);
-            this.dateTimePickerEndDate.TabIndex = 3;
+            this.dateTimePickerEndDate.TabIndex = 12;
             // 
             // dateTimePickerStartDate
             // 
             this.dateTimePickerStartDate.Location = new System.Drawing.Point(78, 253);
             this.dateTimePickerStartDate.Name = "dateTimePickerStartDate";
             this.dateTimePickerStartDate.Size = new System.Drawing.Size(112, 21);
-            this.dateTimePickerStartDate.TabIndex = 3;
+            this.dateTimePickerStartDate.TabIndex = 11;
             // 
             // cmbServiceStyle
             // 
@@ -297,7 +297,7 @@
             this.cmbServiceStyle.Location = new System.Drawing.Point(397, 207);
             this.cmbServiceStyle.Name = "cmbServiceStyle";
             this.cmbServiceStyle.Size = new System.Drawing.Size(178, 20);
-            this.cmbServiceStyle.TabIndex = 2;
+            this.cmbServiceStyle.TabIndex = 10;
             this.cmbServiceStyle.Text = "售后";
             // 
             // cmbResponsibleUserName
@@ -306,7 +306,7 @@
             this.cmbResponsibleUserName.Location = new System.Drawing.Point(72, 207);
             this.cmbResponsibleUserName.Name = "cmbResponsibleUserName";
             this.cmbResponsibleUserName.Size = new System.Drawing.Size(178, 20);
-            this.cmbResponsibleUserName.TabIndex = 2;
+            this.cmbResponsibleUserName.TabIndex = 9;
             // 
             // cmbUnitName
             // 
@@ -314,7 +314,7 @@
             this.cmbUnitName.Location = new System.Drawing.Point(78, 69);
             this.cmbUnitName.Name = "cmbUnitName";
             this.cmbUnitName.Size = new System.Drawing.Size(178, 20);
-            this.cmbUnitName.TabIndex = 2;
+            this.cmbUnitName.TabIndex = 4;
             this.cmbUnitName.SelectedIndexChanged += new System.EventHandler(this.cmbUnitName_SelectedIndexChanged);
             // 
             // label1
@@ -475,84 +475,84 @@
             this.textBoxUserCount.Location = new System.Drawing.Point(513, 299);
             this.textBoxUserCount.Name = "textBoxUserCount";
             this.textBoxUserCount.Size = new System.Drawing.Size(59, 21);
-            this.textBoxUserCount.TabIndex = 1;
+            this.textBoxUserCount.TabIndex = 15;
             // 
             // textBoxDayCount
             // 
             this.textBoxDayCount.Location = new System.Drawing.Point(513, 253);
             this.textBoxDayCount.Name = "textBoxDayCount";
             this.textBoxDayCount.Size = new System.Drawing.Size(59, 21);
-            this.textBoxDayCount.TabIndex = 1;
+            this.textBoxDayCount.TabIndex = 13;
             // 
             // textBoxResponsibleCustomerFax
             // 
             this.textBoxResponsibleCustomerFax.Location = new System.Drawing.Point(397, 161);
             this.textBoxResponsibleCustomerFax.Name = "textBoxResponsibleCustomerFax";
             this.textBoxResponsibleCustomerFax.Size = new System.Drawing.Size(178, 21);
-            this.textBoxResponsibleCustomerFax.TabIndex = 1;
+            this.textBoxResponsibleCustomerFax.TabIndex = 8;
             // 
             // textBoxReturnMoney
             // 
             this.textBoxReturnMoney.Location = new System.Drawing.Point(78, 437);
             this.textBoxReturnMoney.Name = "textBoxReturnMoney";
             this.textBoxReturnMoney.Size = new System.Drawing.Size(497, 21);
-            this.textBoxReturnMoney.TabIndex = 1;
+            this.textBoxReturnMoney.TabIndex = 18;
             // 
             // textBoxExplain
             // 
             this.textBoxExplain.Location = new System.Drawing.Point(78, 482);
             this.textBoxExplain.Name = "textBoxExplain";
             this.textBoxExplain.Size = new System.Drawing.Size(497, 21);
-            this.textBoxExplain.TabIndex = 1;
+            this.textBoxExplain.TabIndex = 19;
             // 
             // textBoxFaultInfo
             // 
             this.textBoxFaultInfo.Location = new System.Drawing.Point(78, 391);
             this.textBoxFaultInfo.Name = "textBoxFaultInfo";
             this.textBoxFaultInfo.Size = new System.Drawing.Size(497, 21);
-            this.textBoxFaultInfo.TabIndex = 1;
+            this.textBoxFaultInfo.TabIndex = 17;
             // 
             // textBoxEquipsCount
             // 
             this.textBoxEquipsCount.Location = new System.Drawing.Point(78, 345);
             this.textBoxEquipsCount.Name = "textBoxEquipsCount";
             this.textBoxEquipsCount.Size = new System.Drawing.Size(497, 21);
-            this.textBoxEquipsCount.TabIndex = 1;
+            this.textBoxEquipsCount.TabIndex = 16;
             // 
             // textBoxUserNames
             // 
             this.textBoxUserNames.Location = new System.Drawing.Point(78, 299);
             this.textBoxUserNames.Name = "textBoxUserNames";
             this.textBoxUserNames.Size = new System.Drawing.Size(352, 21);
-            this.textBoxUserNames.TabIndex = 1;
+            this.textBoxUserNames.TabIndex = 14;
             // 
             // textBoxResponsibleCustomerTel
             // 
             this.textBoxResponsibleCustomerTel.Location = new System.Drawing.Point(78, 161);
             this.textBoxResponsibleCustomerTel.Name = "textBoxResponsibleCustomerTel";
             this.textBoxResponsibleCustomerTel.Size = new System.Drawing.Size(178, 21);
-            this.textBoxResponsibleCustomerTel.TabIndex = 1;
+            this.textBoxResponsibleCustomerTel.TabIndex = 7;
             // 
             // textBoxResponsibleCustomerName
             // 
             this.textBoxResponsibleCustomerName.Location = new System.Drawing.Point(397, 69);
             this.textBoxResponsibleCustomerName.Name = "textBoxResponsibleCustomerName";
             this.textBoxResponsibleCustomerName.Size = new System.Drawing.Size(178, 21);
-            this.textBoxResponsibleCustomerName.TabIndex = 1;
+            this.textBoxResponsibleCustomerName.TabIndex = 5;
             // 
             // textBoxAddress
             // 
             this.textBoxAddress.Location = new System.Drawing.Point(78, 115);
             this.textBoxAddress.Name = "textBoxAddress";
             this.textBoxAddress.Size = new System.Drawing.Size(497, 21);
-            this.textBoxAddress.TabIndex = 1;
+            this.textBoxAddress.TabIndex = 6;
             // 
             // textBoxWorkOrderNumber
             // 
             this.textBoxWorkOrderNumber.Location = new System.Drawing.Point(78, 23);
             this.textBoxWorkOrderNumber.Name = "textBoxWorkOrderNumber";
             this.textBoxWorkOrderNumber.Size = new System.Drawing.Size(178, 21);
-            this.textBoxWorkOrderNumber.TabIndex = 1;
+            this.textBoxWorkOrderNumber.TabIndex = 3;
             // 
             // groupBox3
             // 
@@ -568,7 +568,7 @@
             this.groupBox3.Location = new System.Drawing.Point(683, 127);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(655, 515);
-            this.groupBox3.TabIndex = 1;
+            this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "满意度情况";
             // 
@@ -590,7 +590,7 @@
             this.groupBox7.Location = new System.Drawing.Point(1, 279);
             this.groupBox7.Name = "groupBox7";
             this.groupBox7.Size = new System.Drawing.Size(654, 121);
-            this.groupBox7.TabIndex = 0;
+            this.groupBox7.TabIndex = 2;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "产品价格，改进建议";
             // 
@@ -608,7 +608,7 @@
             this.groupBox6.Location = new System.Drawing.Point(1, 152);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Size = new System.Drawing.Size(654, 121);
-            this.groupBox6.TabIndex = 0;
+            this.groupBox6.TabIndex = 1;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "态度，速度，产品维护，备件供应";
             // 
@@ -635,7 +635,7 @@
             this.richTextBoxSuggestAppearance.Location = new System.Drawing.Point(1, 20);
             this.richTextBoxSuggestAppearance.Name = "richTextBoxSuggestAppearance";
             this.richTextBoxSuggestAppearance.Size = new System.Drawing.Size(654, 96);
-            this.richTextBoxSuggestAppearance.TabIndex = 0;
+            this.richTextBoxSuggestAppearance.TabIndex = 1;
             this.richTextBoxSuggestAppearance.Text = "";
             // 
             // cmbSatisfiedPrice
@@ -661,7 +661,7 @@
             this.cmbSatisfiedService.Location = new System.Drawing.Point(323, 24);
             this.cmbSatisfiedService.Name = "cmbSatisfiedService";
             this.cmbSatisfiedService.Size = new System.Drawing.Size(121, 20);
-            this.cmbSatisfiedService.TabIndex = 3;
+            this.cmbSatisfiedService.TabIndex = 1;
             this.cmbSatisfiedService.Text = "很满意";
             // 
             // label19
@@ -692,7 +692,7 @@
             this.cmbSatisfiedDeliver.Location = new System.Drawing.Point(70, 58);
             this.cmbSatisfiedDeliver.Name = "cmbSatisfiedDeliver";
             this.cmbSatisfiedDeliver.Size = new System.Drawing.Size(121, 20);
-            this.cmbSatisfiedDeliver.TabIndex = 3;
+            this.cmbSatisfiedDeliver.TabIndex = 2;
             this.cmbSatisfiedDeliver.Text = "很满意";
             // 
             // cmbSatisfiedQuality
@@ -705,7 +705,7 @@
             this.cmbSatisfiedQuality.Location = new System.Drawing.Point(70, 24);
             this.cmbSatisfiedQuality.Name = "cmbSatisfiedQuality";
             this.cmbSatisfiedQuality.Size = new System.Drawing.Size(121, 20);
-            this.cmbSatisfiedQuality.TabIndex = 3;
+            this.cmbSatisfiedQuality.TabIndex = 0;
             this.cmbSatisfiedQuality.Text = "很满意";
             // 
             // label18

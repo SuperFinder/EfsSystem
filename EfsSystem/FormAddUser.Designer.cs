@@ -75,7 +75,7 @@
             this.textBoxUserName.Location = new System.Drawing.Point(133, 35);
             this.textBoxUserName.Name = "textBoxUserName";
             this.textBoxUserName.Size = new System.Drawing.Size(143, 21);
-            this.textBoxUserName.TabIndex = 1;
+            this.textBoxUserName.TabIndex = 0;
             // 
             // textBoxDepartment
             // 
@@ -89,14 +89,14 @@
             this.textBoxTel.Location = new System.Drawing.Point(133, 116);
             this.textBoxTel.Name = "textBoxTel";
             this.textBoxTel.Size = new System.Drawing.Size(143, 21);
-            this.textBoxTel.TabIndex = 1;
+            this.textBoxTel.TabIndex = 3;
             // 
             // textBoxPostion
             // 
             this.textBoxPostion.Location = new System.Drawing.Point(133, 89);
             this.textBoxPostion.Name = "textBoxPostion";
             this.textBoxPostion.Size = new System.Drawing.Size(143, 21);
-            this.textBoxPostion.TabIndex = 3;
+            this.textBoxPostion.TabIndex = 2;
             // 
             // label1
             // 
@@ -123,7 +123,7 @@
             this.btnCancel.Location = new System.Drawing.Point(201, 155);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 37);
-            this.btnCancel.TabIndex = 4;
+            this.btnCancel.TabIndex = 5;
             this.btnCancel.Text = "取消";
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
