@@ -162,5 +162,15 @@ namespace EfsSystem
             textBoxResponsibleCustomerTel.Text = customerInfo.tel;
             textBoxResponsibleCustomerFax.Text = customerInfo.fax;
         }
+
+        private void listBox1_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            listBox1.Items.Remove(listBox1.SelectedItem);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
