@@ -12,6 +12,8 @@ namespace EfsSystem
         public List<UserInfo> userInfos = new List<UserInfo>();
         public List<Equip> equips = new List<Equip>();
         public List<SparePart> spareParts = new List<SparePart>();
+        public List<FalutInfo> falutInfos = new List<FalutInfo>();
+        public List<LeaveOverInfo> leaveOverInfos = new List<LeaveOverInfo>();
 
         readonly CustomerInfoDao customerInfoDao = new CustomerInfoDao();
         readonly EquipDao equipDao = new EquipDao();
@@ -43,6 +45,11 @@ namespace EfsSystem
             {
                 cmbResponsibleUserName.Items.Add(userInfo.userName);
             }
+            cmbSatisfiedQuality.SelectedIndex = 0;
+            cmbSatisfiedService.SelectedIndex = 0;
+            cmbSatisfiedDeliver.SelectedIndex = 0;
+            cmbSatisfiedPrice.SelectedIndex = 0;
+            cmbServiceStyle.SelectedIndex = 0;
         }
         /// <summary>
         /// 客户信息维护
@@ -165,12 +172,223 @@ namespace EfsSystem
 
         private void listBox1_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-            listBox1.Items.Remove(listBox1.SelectedItem);
+            DialogResult dialogResult = MessageBox.Show("是否删除？","提示",MessageBoxButtons.OKCancel);
+            if (dialogResult == DialogResult.OK)
+            {
+                listBox1.Items.Remove(listBox1.SelectedItem);
+            }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnAddFaultOrLeaveOverInfo_Click(object sender, EventArgs e)
         {
-            
+            FormAddFaultOrLeaveOverInfo formAddFaultOrLeaveOverInfo = new FormAddFaultOrLeaveOverInfo();
+            formAddFaultOrLeaveOverInfo.ShowDialog();
+            leaveOverInfos = formAddFaultOrLeaveOverInfo.getLeaveOverInfos();
+            falutInfos = formAddFaultOrLeaveOverInfo.getFalutInfos();
+            foreach (FalutInfo falutInfo in falutInfos)
+            {
+                listBox1.Items.Add(falutInfo.falutInfo);
+            }
+            foreach (LeaveOverInfo leaveOverInfo in leaveOverInfos)
+            {
+                listBox1.Items.Add(leaveOverInfo.falutInfo);
+            }
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            #region 输入框验证
+
+            if (textBoxReceiverName.Text.Trim() == String.Empty)
+            {
+                MessageBox.Show("请输入接收人姓名", "提示", MessageBoxButtons.OK);
+                textBoxReceiverName.Focus();
+                return;
+            }
+            if (richTextBoxBrief.Text.Trim() == String.Empty)
+            {
+                MessageBox.Show("请输入信息简要", "提示", MessageBoxButtons.OK);
+                richTextBoxBrief.Focus();
+                return;
+            }
+            if (textBoxWorkOrderNumber.Text.Trim() == String.Empty)
+            {
+                MessageBox.Show("请输入工作令号", "提示", MessageBoxButtons.OK);
+                textBoxWorkOrderNumber.Focus();
+                return;
+            }
+            if (cmbUnitName.Text.Trim() == String.Empty)
+            {
+                MessageBox.Show("请输入单位", "提示", MessageBoxButtons.OK);
+                cmbUnitName.Focus();
+                return;
+            }
+            if (textBoxResponsibleCustomerName.Text.Trim() == String.Empty)
+            {
+                MessageBox.Show("请输入客户负责人", "提示", MessageBoxButtons.OK);
+                textBoxResponsibleCustomerName.Focus();
+                return;
+            }
+            if (textBoxAddress.Text.Trim() == String.Empty)
+            {
+                MessageBox.Show("请输入通信地址", "提示", MessageBoxButtons.OK);
+                textBoxAddress.Focus();
+                return;
+            }
+            if (textBoxResponsibleCustomerTel.Text.Trim() == String.Empty)
+            {
+                MessageBox.Show("请输入电话", "提示", MessageBoxButtons.OK);
+                textBoxResponsibleCustomerTel.Focus();
+                return;
+            }
+            if (textBoxResponsibleCustomerFax.Text.Trim() == String.Empty)
+            {
+                MessageBox.Show("请输入传真", "提示", MessageBoxButtons.OK);
+                textBoxResponsibleCustomerFax.Focus();
+                return;
+            }
+            if (cmbResponsibleUserName.Text.Trim() == String.Empty)
+            {
+                MessageBox.Show("请输入带队人", "提示", MessageBoxButtons.OK);
+                cmbResponsibleUserName.Focus();
+                return;
+            }
+            if (textBoxDayCount.Text.Trim() == String.Empty)
+            {
+                MessageBox.Show("请输入天数", "提示", MessageBoxButtons.OK);
+                textBoxDayCount.Focus();
+                return;
+            }
+            if (textBoxUserNames.Text.Trim() == String.Empty)
+            {
+                MessageBox.Show("请输入人员", "提示", MessageBoxButtons.OK);
+                textBoxUserNames.Focus();
+                return;
+            }
+            if (textBoxUserCount.Text.Trim() == String.Empty)
+            {
+                MessageBox.Show("请输入人数", "提示", MessageBoxButtons.OK);
+                textBoxUserCount.Focus();
+                return;
+            }
+            if (textBoxEquipsCount.Text.Trim() == String.Empty)
+            {
+                MessageBox.Show("请输入装备数量", "提示", MessageBoxButtons.OK);
+                textBoxEquipsCount.Focus();
+                return;
+            }
+            if (listBox1.Items.Count == 0)
+            {
+                MessageBox.Show("请添加故障信息", "提示", MessageBoxButtons.OK);
+                listBox1.Focus();
+                return;
+            }
+            if (textBoxReturnMoney.Text.Trim() == String.Empty)
+            {
+                MessageBox.Show("请输入回款", "提示", MessageBoxButtons.OK);
+                textBoxReturnMoney.Focus();
+                return;
+            }
+            if (textBoxExplain.Text.Trim() == String.Empty)
+            {
+                MessageBox.Show("请输入说明", "提示", MessageBoxButtons.OK);
+                textBoxExplain.Focus();
+                return;
+            }
+            if (textBoxReturnMoney.Text.Trim() == String.Empty)
+            {
+                MessageBox.Show("请输入装备数量", "提示", MessageBoxButtons.OK);
+                textBoxReturnMoney.Focus();
+                return;
+            }
+            if (richTextBoxSuggestAppearance.Text.Trim() == String.Empty)
+            {
+                MessageBox.Show("请输入建议", "提示", MessageBoxButtons.OK);
+                richTextBoxSuggestAppearance.Focus();
+                return;
+            }
+            if (richTextBoxSuggestAttitude.Text.Trim() == String.Empty)
+            {
+                MessageBox.Show("请输入建议", "提示", MessageBoxButtons.OK);
+                richTextBoxSuggestAttitude.Focus();
+                return;
+            }
+            if (richTextBoxSuggestPrice.Text.Trim() == String.Empty)
+            {
+                MessageBox.Show("请输入建议", "提示", MessageBoxButtons.OK);
+                richTextBoxSuggestPrice.Focus();
+                return;
+            }
+
+            #endregion
+            ServiceInfo serviceInfo = new ServiceInfo()
+            {
+                infoName = textBoxWorkOrderNumber.Text,
+                receiverName = textBoxReceiverName.Text,
+                brief = richTextBoxBrief.Text,
+                basicInfo = "",
+                workOderNumber = textBoxWorkOrderNumber.Text,
+                unitName = cmbUnitName.Text,
+                address = textBoxAddress.Text,
+                responsibleCustomerName = textBoxResponsibleCustomerName.Text,
+                responsibleCustomerTel = textBoxResponsibleCustomerTel.Text,
+                responsibleCustomerFax = textBoxResponsibleCustomerFax.Text,
+                responsibleUserName = cmbResponsibleUserName.Text,
+                responsibleUserTel = "",
+                startDate = dateTimePickerStartDate.Value,
+                endDate = dateTimePickerEndDate.Value,
+                userNames = textBoxUserNames.Text,
+                userCount = textBoxUserCount.Text,
+                equipsCount = textBoxEquipsCount.Text,
+                faultInfo = "",
+                returnMoney = textBoxReturnMoney.Text,
+                explain = textBoxExplain.Text,
+                satisfiedQuality = cmbSatisfiedQuality.Text,
+                satisfiedService = cmbSatisfiedService.Text,
+                satisfiedDeliver = cmbSatisfiedDeliver.Text,
+                satisfiedPrice = cmbSatisfiedPrice.Text,
+                suggestAppearance = richTextBoxSuggestAppearance.Text,
+                suggestAttitude = richTextBoxSuggestAttitude.Text,
+                suggestPrice = richTextBoxSuggestPrice.Text
+            };
+            serviceInfoDao.addServiceInfo(serviceInfo);
+            MessageBox.Show("添加成功");
+
+            #region 清空输入信息
+
+            textBoxWorkOrderNumber.Text = "";
+            textBoxReceiverName.Text = "";
+            richTextBoxBrief.Text = "";
+            textBoxWorkOrderNumber.Text = "";
+            cmbUnitName.Text = "";
+            textBoxAddress.Text = "";
+            textBoxResponsibleCustomerName.Text = "";
+            textBoxResponsibleCustomerTel.Text = "";
+            textBoxResponsibleCustomerFax.Text = "";
+            textBoxResponsibleCustomerFax.Text = "";
+            cmbResponsibleUserName.Text = "";
+            cmbServiceStyle.SelectedIndex = 0;
+            dateTimePickerStartDate.Value = DateTime.Now;
+            dateTimePickerEndDate.Value = DateTime.Now.AddDays(1);
+            textBoxDayCount.Text = "";
+            textBoxUserNames.Text = "";
+            textBoxUserCount.Text = "";
+            listBox1.Items.Clear();
+            textBoxEquipsCount.Text = "";
+            textBoxReturnMoney.Text = "";
+            textBoxExplain.Text = "";
+            cmbSatisfiedQuality.SelectedIndex = 0;
+            cmbSatisfiedService.SelectedIndex = 0;
+            cmbSatisfiedDeliver.SelectedIndex = 0;
+            cmbSatisfiedPrice.SelectedIndex = 0;
+            richTextBoxSuggestAppearance.Text = "";
+            richTextBoxSuggestAttitude.Text = "";
+            richTextBoxSuggestPrice.Text = "";
+
+            #endregion
+
+            leaveOverInfos.Clear();
+            falutInfos.Clear();
         }
     }
 }

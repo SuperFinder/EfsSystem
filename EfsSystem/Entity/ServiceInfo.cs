@@ -5,7 +5,7 @@ using System.Text;
 
 namespace EfsSystem.Entity
 {
-    class ServiceInfo
+    public class ServiceInfo
     {
         public int id { get; set; }
         public string infoName { get; set; }

@@ -5,7 +5,7 @@ using System.Text;
 
 namespace EfsSystem.Entity
 {
-    class LeaveOverInfo
+    public class LeaveOverInfo
     {
         public int id { get; set; }
         public string equipName { get; set; }

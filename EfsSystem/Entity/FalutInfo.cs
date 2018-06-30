@@ -5,7 +5,7 @@ using System.Text;
 
 namespace EfsSystem.Entity
 {
-    class FalutInfo
+    public class FalutInfo
     {
         public int id { get; set; }
         public string equipName { get; set; }

@@ -44,6 +44,7 @@
             this.lblMessageBrife = new System.Windows.Forms.Label();
             this.lblReceiverName = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnAddFalutOrLeaveOverInfo = new System.Windows.Forms.Button();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.dateTimePickerEndDate = new System.Windows.Forms.DateTimePicker();
             this.dateTimePickerStartDate = new System.Windows.Forms.DateTimePicker();
@@ -94,7 +95,7 @@
             this.cmbSatisfiedQuality = new System.Windows.Forms.ComboBox();
             this.label18 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -234,7 +235,7 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.button1);
+            this.groupBox2.Controls.Add(this.btnAddFalutOrLeaveOverInfo);
             this.groupBox2.Controls.Add(this.listBox1);
             this.groupBox2.Controls.Add(this.dateTimePickerEndDate);
             this.groupBox2.Controls.Add(this.dateTimePickerStartDate);
@@ -276,6 +277,16 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "基本信息";
             // 
+            // btnAddFalutOrLeaveOverInfo
+            // 
+            this.btnAddFalutOrLeaveOverInfo.Location = new System.Drawing.Point(480, 335);
+            this.btnAddFalutOrLeaveOverInfo.Name = "btnAddFalutOrLeaveOverInfo";
+            this.btnAddFalutOrLeaveOverInfo.Size = new System.Drawing.Size(92, 88);
+            this.btnAddFalutOrLeaveOverInfo.TabIndex = 20;
+            this.btnAddFalutOrLeaveOverInfo.Text = "添加故障信息";
+            this.btnAddFalutOrLeaveOverInfo.UseVisualStyleBackColor = true;
+            this.btnAddFalutOrLeaveOverInfo.Click += new System.EventHandler(this.btnAddFaultOrLeaveOverInfo_Click);
+            // 
             // listBox1
             // 
             this.listBox1.FormattingEnabled = true;
@@ -302,6 +313,7 @@
             // 
             // cmbServiceStyle
             // 
+            this.cmbServiceStyle.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbServiceStyle.FormattingEnabled = true;
             this.cmbServiceStyle.Items.AddRange(new object[] {
             "售后",
@@ -310,12 +322,11 @@
             this.cmbServiceStyle.Name = "cmbServiceStyle";
             this.cmbServiceStyle.Size = new System.Drawing.Size(178, 20);
             this.cmbServiceStyle.TabIndex = 10;
-            this.cmbServiceStyle.Text = "售后";
             // 
             // cmbResponsibleUserName
             // 
             this.cmbResponsibleUserName.FormattingEnabled = true;
-            this.cmbResponsibleUserName.Location = new System.Drawing.Point(72, 186);
+            this.cmbResponsibleUserName.Location = new System.Drawing.Point(78, 186);
             this.cmbResponsibleUserName.Name = "cmbResponsibleUserName";
             this.cmbResponsibleUserName.Size = new System.Drawing.Size(178, 20);
             this.cmbResponsibleUserName.TabIndex = 9;
@@ -648,6 +659,7 @@
             // 
             // cmbSatisfiedPrice
             // 
+            this.cmbSatisfiedPrice.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbSatisfiedPrice.FormattingEnabled = true;
             this.cmbSatisfiedPrice.Items.AddRange(new object[] {
             "很满意",
@@ -657,10 +669,10 @@
             this.cmbSatisfiedPrice.Name = "cmbSatisfiedPrice";
             this.cmbSatisfiedPrice.Size = new System.Drawing.Size(121, 20);
             this.cmbSatisfiedPrice.TabIndex = 3;
-            this.cmbSatisfiedPrice.Text = "很满意";
             // 
             // cmbSatisfiedService
             // 
+            this.cmbSatisfiedService.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbSatisfiedService.FormattingEnabled = true;
             this.cmbSatisfiedService.Items.AddRange(new object[] {
             "很满意",
@@ -670,7 +682,6 @@
             this.cmbSatisfiedService.Name = "cmbSatisfiedService";
             this.cmbSatisfiedService.Size = new System.Drawing.Size(121, 20);
             this.cmbSatisfiedService.TabIndex = 1;
-            this.cmbSatisfiedService.Text = "很满意";
             // 
             // label19
             // 
@@ -692,6 +703,7 @@
             // 
             // cmbSatisfiedDeliver
             // 
+            this.cmbSatisfiedDeliver.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbSatisfiedDeliver.FormattingEnabled = true;
             this.cmbSatisfiedDeliver.Items.AddRange(new object[] {
             "很满意",
@@ -701,10 +713,10 @@
             this.cmbSatisfiedDeliver.Name = "cmbSatisfiedDeliver";
             this.cmbSatisfiedDeliver.Size = new System.Drawing.Size(121, 20);
             this.cmbSatisfiedDeliver.TabIndex = 2;
-            this.cmbSatisfiedDeliver.Text = "很满意";
             // 
             // cmbSatisfiedQuality
             // 
+            this.cmbSatisfiedQuality.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbSatisfiedQuality.FormattingEnabled = true;
             this.cmbSatisfiedQuality.Items.AddRange(new object[] {
             "很满意",
@@ -714,7 +726,6 @@
             this.cmbSatisfiedQuality.Name = "cmbSatisfiedQuality";
             this.cmbSatisfiedQuality.Size = new System.Drawing.Size(121, 20);
             this.cmbSatisfiedQuality.TabIndex = 0;
-            this.cmbSatisfiedQuality.Text = "很满意";
             // 
             // label18
             // 
@@ -734,21 +745,22 @@
             this.label16.TabIndex = 2;
             this.label16.Text = "质量:";
             // 
-            // button1
+            // btnSave
             // 
-            this.button1.Location = new System.Drawing.Point(480, 335);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(92, 88);
-            this.button1.TabIndex = 20;
-            this.button1.Text = "添加故障信息";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnSave.Location = new System.Drawing.Point(12, 649);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(1327, 36);
+            this.btnSave.TabIndex = 3;
+            this.btnSave.Text = "保存";
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1350, 691);
+            this.Controls.Add(this.btnSave);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -844,7 +856,8 @@
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.ComboBox cmbResponsibleUserName;
         private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnAddFalutOrLeaveOverInfo;
+        private System.Windows.Forms.Button btnSave;
     }
 }
 

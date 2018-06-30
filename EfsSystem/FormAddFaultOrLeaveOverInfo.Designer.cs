@@ -177,6 +177,7 @@
             this.textBoxSparePartCount.Name = "textBoxSparePartCount";
             this.textBoxSparePartCount.Size = new System.Drawing.Size(248, 21);
             this.textBoxSparePartCount.TabIndex = 7;
+            this.textBoxSparePartCount.Text = "0";
             // 
             // btnSave
             // 
@@ -196,6 +197,7 @@
             this.btnCancel.TabIndex = 2;
             this.btnCancel.Text = "取消";
             this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // lblIsProcessed
             // 
