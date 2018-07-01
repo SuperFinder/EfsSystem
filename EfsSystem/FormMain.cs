@@ -352,8 +352,16 @@ namespace EfsSystem
                 suggestPrice = richTextBoxSuggestPrice.Text
             };
             serviceInfoDao.addServiceInfo(serviceInfo);
+            if (falutInfos.Count > 0)
+            {
+                falutInfoDao.addFaultInfo(falutInfos);
+            }
+            if (leaveOverInfos.Count > 0)
+            {
+                leaveOverInfoDao.addLeaveOverInfo(leaveOverInfos);
+            }
             MessageBox.Show("添加成功");
-
+            
             #region 清空输入信息
 
             textBoxWorkOrderNumber.Text = "";

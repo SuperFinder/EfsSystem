@@ -56,5 +56,26 @@ namespace EfsSystem.Dao
                 throw;
             }
         }
+
+        public int getMaxId()
+        {
+            int maxId = 0;
+            try
+            {
+                string sql = "select max(id) from services";
+                MySqlDataReader mySqlDataReader = MySqlHelper.ExecuteReader(MySqlHelper.conn, CommandType.Text, sql, null);
+                if (mySqlDataReader.Read())
+                {
+                    maxId = (int) mySqlDataReader["max(id)"];
+                }
+                mySqlDataReader.Close();
+            }
+            catch (Exception e)
+            {
+                LogHelper.WriteLog(typeof(ServiceInfo), e.ToString());
+                throw;
+            }
+            return maxId;
+        }
     }
 }
