@@ -321,6 +321,12 @@ namespace EfsSystem
             }
 
             #endregion
+
+            if (serviceInfoDao.getServiceInfoByOrderNumber(textBoxWorkOrderNumber.Text) != null)
+            {
+                MessageBox.Show("工作令号" + textBoxWorkOrderNumber.Text + "已存在，无法重新添加");
+                return;
+            }
             ServiceInfo serviceInfo = new ServiceInfo()
             {
                 infoName = textBoxWorkOrderNumber.Text,
@@ -339,6 +345,7 @@ namespace EfsSystem
                 endDate = dateTimePickerEndDate.Value,
                 userNames = textBoxUserNames.Text,
                 userCount = textBoxUserCount.Text,
+                serviceStyle = cmbServiceStyle.Text,
                 equipsCount = textBoxEquipsCount.Text,
                 faultInfo = "",
                 returnMoney = textBoxReturnMoney.Text,
@@ -351,16 +358,24 @@ namespace EfsSystem
                 suggestAttitude = richTextBoxSuggestAttitude.Text,
                 suggestPrice = richTextBoxSuggestPrice.Text
             };
-            serviceInfoDao.addServiceInfo(serviceInfo);
-            if (falutInfos.Count > 0)
+            if (serviceInfoDao.getServiceInfoByOrderNumber(textBoxWorkOrderNumber.Text) == null)
             {
-                falutInfoDao.addFaultInfo(falutInfos);
+                serviceInfoDao.addServiceInfo(serviceInfo);
+                if (falutInfos.Count > 0)
+                {
+                    falutInfoDao.addFaultInfo(falutInfos);
+                }
+                if (leaveOverInfos.Count > 0)
+                {
+                    leaveOverInfoDao.addLeaveOverInfo(leaveOverInfos);
+                }
+                MessageBox.Show("添加成功");
             }
-            if (leaveOverInfos.Count > 0)
+            else
             {
-                leaveOverInfoDao.addLeaveOverInfo(leaveOverInfos);
+                MessageBox.Show("改工作令号已存在");
+                return;
             }
-            MessageBox.Show("添加成功");
             
             #region 清空输入信息
 

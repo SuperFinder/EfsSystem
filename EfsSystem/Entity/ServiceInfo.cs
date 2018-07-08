@@ -24,6 +24,7 @@ namespace EfsSystem.Entity
         public DateTime endDate { get; set; }
         public string userNames { get; set; }
         public string userCount { get; set; }
+        public string serviceStyle { get; set; }
         public string equipsCount { get; set; }
         public string faultInfo { get; set; }
         public string returnMoney { get; set; }

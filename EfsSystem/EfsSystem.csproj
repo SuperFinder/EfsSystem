@@ -58,6 +58,7 @@
     <Compile Include="common\AutoSizeFormHelper.cs" />
     <Compile Include="common\LogHelper.cs" />
     <Compile Include="common\MySqlHelper.cs" />
+    <Compile Include="common\TextBoxToolV2.cs" />
     <Compile Include="Dao\CustomerInfoDao.cs" />
     <Compile Include="Dao\EquipDao.cs" />
     <Compile Include="Dao\FalutInfoDao.cs" />
